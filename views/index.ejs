@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>node js</title>
+</head>
+<body>
+	<% if(typeof data != 'undefined'){data=[];}%>
+	<ol>
+		<% for(var i=0;i<data.length;i++){%>
+			<li><%= data[i].nom%></li>
+		<% }%>
+	</ol>
+		
+	<ul>
+		<li><a href="/find">getData</a></li>
+	</ul>
+	<form action="/insert" method="post">
+		<label for="numero">num</label>
+		<input type="text" name="numero" value="">
+		<label for="nom">nom</label>
+		<input type="text" name="nom" value="">
+		<label for="age">age</label>
+		<input type="text" name="age" value="">
+		<label for="salaire">salaire</label>
+		<input type="text" name="salaire" value="">
+		<input type="submit" name="" value="valider">
+	</form>
+	<% if(typeof insertDone != 'undefined'){%>
+		<p><%= insertDone %></p>
+	<%}%>
+</body>
+</html>
